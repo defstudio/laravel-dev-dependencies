@@ -20,9 +20,6 @@
         }
     ],
     "require": {
-
-    },
-    "require-dev": {
         "nunomaduro/larastan": "^v0.7",
         "friendsofphp/php-cs-fixer": "^v3.1",
         "pestphp/pest": "^v1.18",
