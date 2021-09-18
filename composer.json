@@ -33,7 +33,10 @@
     "autoload": {
         "psr-4": {
             "DefStudio\\LaravelDevDependencies\\": "src"
-        }
+        },
+        "files": [
+            "src/Pest/helpers.php"
+        ]
     },
     "config": {
         "sort-packages": true
