@@ -66,5 +66,5 @@ function bind_test_double(object $class): object
 {
     app()->bind(get_parent_class($class), $class::class);
 
-    return app($class);
+    return app(get_parent_class($class));
 }
