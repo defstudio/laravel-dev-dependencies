@@ -18,10 +18,19 @@ function mock_authorization(string $action, mixed $target = null, $allow = true)
     }
 }
 
-function bind_mock(string $class, callable ...$methods)
+/**
+ * @template TClass
+ * @param class-string<TCalue> $class
+ * @param callable ...$methods
+ *
+ * @return TClass|\Mockery\MockInterface
+ */
+function bind_mock(string $class, callable ...$methods): object
 {
     $mock = mock($class)->expect(...$methods);
     app()->bind($class, fn () => $mock);
+
+    return $mock;
 }
 
 /**
