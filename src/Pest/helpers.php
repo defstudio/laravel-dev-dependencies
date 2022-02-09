@@ -20,7 +20,7 @@ function mock_authorization(string $action, mixed $target = null, $allow = true)
 
 /**
  * @template TClass
- * @param class-string<TCalue> $class
+ * @param class-string<TClass> $class
  * @param callable ...$methods
  *
  * @return TClass|\Mockery\MockInterface
@@ -31,6 +31,17 @@ function bind_mock(string $class, callable ...$methods): object
     app()->bind($class, fn () => $mock);
 
     return $mock;
+}
+
+/**
+ * @template TClass
+ * @param class-string<TClass> $class
+ * @param callable ...$methods
+ *
+ * @return TClass|\Mockery\MockInterface
+ */
+function partial_mock(string $class, callable ...$methods): object{
+    return bind_mock($class, ...$methods)->makePartial();
 }
 
 /**
