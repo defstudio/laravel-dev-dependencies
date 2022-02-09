@@ -24,13 +24,12 @@ function bind_mock(string $class, callable ...$methods)
     app()->bind($class, fn () => $mock);
 }
 
-function bind_test_double(object $class)
-{
-    app()->bind(get_parent_class($class), $class::class);
-}
-
 /**
- * @param class-string $model_class
+ * @template TClass
+ *
+ * @param class-string<TClass> $model_class
+ *
+ * @return TClass
  */
 function mock_model(string $model_class)
 {
@@ -55,10 +54,17 @@ function mock_model(string $model_class)
         };
     CLASS);
 
-    mock_class($model_class);
+    return bind_test_double($model_class);
 }
 
-function mock_class(object $class)
+/**
+ * @param object $class
+ *
+ * @return object
+ */
+function bind_test_double(object $class): object
 {
-    bind_test_double($class);
+    app()->bind(get_parent_class($class), $class::class);
+
+    return app($class);
 }
