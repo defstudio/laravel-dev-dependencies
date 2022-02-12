@@ -29,9 +29,15 @@
         "pestphp/pest-plugin-parallel": "^0.3 || ^1.0",
         "pestphp/pest-plugin-livewire": "^v1.0",
         "spatie/pest-plugin-test-time": "^1.0",
-        "def-studio/x-ray": "dev-master",
+        "defstudio/x-ray": "dev-master",
         "infection/infection": "^0.26.0"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/def-studio/x-ray.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "DefStudio\\LaravelDevDependencies\\": "src"
@@ -40,12 +46,6 @@
             "src/Pest/helpers.php"
         ]
     },
-    "repositories: [
-        {
-            "type": "git",
-            "url": "https://github.com/def-studio/x-ray.git"
-        }
-    ],    
     "config": {
         "sort-packages": true
     },
