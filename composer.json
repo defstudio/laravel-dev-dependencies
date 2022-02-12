@@ -28,7 +28,8 @@
         "pestphp/pest-plugin-mock": "^1.0",
         "pestphp/pest-plugin-parallel": "^0.3 || ^1.0",
         "pestphp/pest-plugin-livewire": "^v1.0",
-        "def-studio/pest-plugin-test-time": "dev-master",
+        "spatie/pest-plugin-test-time": "^1.0",
+        "def-studio/x-ray": "dev-master",
         "infection/infection": "^0.26.0"
     },
     "autoload": {
@@ -42,7 +43,7 @@
     "repositories: [
         {
             "type": "git",
-            "url: "https://github.com/def-studio/x-ray.git"
+            "url": "https://github.com/def-studio/x-ray.git"
         }
     ],    
     "config": {
