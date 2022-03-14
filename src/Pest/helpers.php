@@ -3,6 +3,21 @@
 
 use Illuminate\Auth\Access\AuthorizationException;
 
+function mock_gate(string $action, mixed $target = null, $allow = true): void
+{
+    if ($allow) {
+        Gate::shouldReceive('check')
+            ->with($action, $target)
+            ->andReturn(true)
+            ->atLeast()->once();
+    } else {
+        Gate::shouldReceive('check')
+            ->with($action, $target)
+            ->andThrow(AuthorizationException::class)
+            ->atLeast()->once();
+    }
+}
+
 function mock_authorization(string $action, mixed $target = null, $allow = true): void
 {
     if ($allow) {
