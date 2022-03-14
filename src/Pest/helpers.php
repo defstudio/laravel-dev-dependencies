@@ -3,7 +3,7 @@
 
 use Illuminate\Auth\Access\AuthorizationException;
 
-function mock_gate(string $action, mixed $target = null, $allow = true): void
+function mock_gate_check(string $action, mixed $target = null, $allow = true): void
 {
     if ($allow) {
         Gate::shouldReceive('check')
