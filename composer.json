@@ -27,7 +27,7 @@
         "pestphp/pest-plugin-faker": "^1.0|^2.x-dev",
         "pestphp/pest-plugin-laravel": "^1.0|^2.x-dev",
         "pestphp/pest-plugin-mock": "^1.0|^2.x-dev",
-        "pestphp/pest-plugin-parallel": "^0.3 || ^1.0",
+        "pestphp/pest-plugin-parallel": "^0.3|^1.0|^2.x-dev",
         "pestphp/pest-plugin-livewire": "^v1.0|^2.x-dev",
         "spatie/pest-plugin-test-time": "^1.0|^2.x-dev",
         "spatie/x-ray": "dev-main",
