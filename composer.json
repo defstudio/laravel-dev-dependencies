@@ -23,7 +23,7 @@
         "nunomaduro/larastan": "^2.0",
         "friendsofphp/php-cs-fixer": "^v3.3",
         "defstudio/pest-plugin-laravel-expectations": "dev-master",
-        "pestphp/pest": "^v1.18",
+        "pestphp/pest": "^v1.18|^v2.x-dev",
         "pestphp/pest-plugin-faker": "^1.0",
         "pestphp/pest-plugin-laravel": "^1.0",
         "pestphp/pest-plugin-mock": "^1.0",
